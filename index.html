@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
     <title>Talawoth</title>
 </head>
 <body>
@@ -22,7 +24,7 @@
                 <p>+012 (345) 6789</p>
             </li>
             <li>
-                <a href="">book a table</a>
+                <a class="btn" href="">book a table <i class="fas fa-long-arrow-alt-right"></i></a>
             </li>
             <button>X</button>
         </ul>
@@ -36,7 +38,38 @@
     </nav>
 
     <header>
-        <div class="bg"></div>
+        <div class="bg">
+            <div class="carousel">
+                <div class="item1">
+                    <div>
+                        <h4>welcome to talawoth</h4>
+                        <h2>Makarona with chicken</h2>
+                        <a class="btn" href="">explore our menu <i class="fas fa-long-arrow-alt-right"></i></a>
+                    </div>
+                </div>
+                <div class="item2">
+                    <div>
+                        <h4>welcome to talawoth</h4>
+                        <h2>Makarona with Stake</h2>
+                        <a class="btn" href="">explore our menu <i class="fas fa-long-arrow-alt-right"></i></a>
+                    </div>
+                </div>
+                <div class="item3">
+                    <div>
+                        <h4>welcome to talawoth</h4>
+                        <h2>Makarona with botatos</h2>
+                        <a class="btn" href="">explore our menu <i class="fas fa-long-arrow-alt-right"></i></a>
+                    </div>
+                </div>
+
+                <button class="next">
+                    <i class="fas fa-chevron-circle-right"></i>
+                </button>
+                <button class="prev">
+                    <i class="fas fa-chevron-circle-left"></i>
+                </button>
+            </div>
+        </div>
     </header>
 
     <script src="./script.js"></script>

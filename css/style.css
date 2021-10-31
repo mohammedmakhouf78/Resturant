@@ -1,0 +1,350 @@
+:root{
+    --white:white;
+    --primary:#c8a96a;
+    --black:#1d1d1d;
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: myfont;
+    src: url('../myfont.ttf');
+}
+
+html{
+    font-family: myfont;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.btn{
+    text-decoration: none;
+    color: #74320C;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: var(--primary);
+    padding: 0.8em 2em;
+    border-radius: 10px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.btn .fas{
+    font-size: 1.2em;
+    margin-left: 7px;
+}
+
+.btn:hover{
+    color: var(--white);
+    background-color: #74320C;
+}
+
+/* ************* */
+/* Nav Start */
+/* ************* */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    color: var(--white);
+    padding: 1.5em 3em;
+    z-index: 999;
+}
+
+nav .logo img{
+    width: 150px;
+    height: 47px;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+}
+
+nav ul li{
+    margin-left: 2em;
+    font-size: 21px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+nav ul li:hover{
+    cursor: pointer;
+    color: var(--primary);
+    transition: all 0.5s ease;
+}
+
+nav ul button{
+    display: none;
+}
+
+nav p{
+    font-size: 21px;
+}
+
+nav .active{
+    transform: translateX(0);
+}
+
+nav .burger{
+    cursor: pointer;
+    display: none;
+}
+
+nav .black-bg{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.651);
+    z-index: 990;
+}
+
+nav .black-bg-active{
+    display: initial;
+}
+
+nav .burger>div{
+    width: 25px;
+    height: 3px;
+    background-color: var(--white);
+}
+
+nav .burger .line:nth-child(2){
+    margin: 6px 0px;
+}
+
+@media only screen and (max-width:1190px){
+    nav ul button{
+        display: initial;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 1.4em;
+        border: none;
+        background-color: transparent;
+        color: var(--white);
+        cursor: pointer;
+    }
+    nav .burger{
+        display: initial;
+    }
+
+    nav ul{
+        position: fixed;
+        background-color: #222222;
+        flex-direction: column;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 250px;
+        padding: 4em 2em;
+        transform: translateX(-100%);
+        transition:transform 0.5s ease;
+        z-index: 999;
+    }
+
+    nav ul li{
+        margin-left: 0px;
+        margin-bottom: 1em;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #333;        
+    }
+
+    nav ul li:last-child{
+        border: none;
+    }
+
+
+}
+/* ************* */
+/* Nav End */
+/* ************* */
+
+
+
+
+/* ************* */
+/* Header Start */
+/* ************* */
+header{
+    height: 900px;
+    background-image: url('https://image.shutterstock.com/z/stock-photo-chalk-board-with-fast-food-background-for-design-menu-for-your-cafe-restaurant-1289061067.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+header .bg{
+    width: 100%;
+    height: 100%;
+    background-color: #000000d0;
+}
+/* ************* */
+/* Header End */
+/* ************* */
+
+
+
+/* ************* */
+/* Carousel Start */
+/* ************* */
+.carousel{
+    position: relative;
+    height: 100%;
+}
+
+.carousel>div{
+    position: absolute;
+    width: 100%;
+    bottom: 0%;
+    transition: transform 0.5s ease;
+    /* transform: translateY(50%); */
+    padding-left: 7em;
+    padding-top: 6em;
+    height: 75%;
+
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 75% 100%;
+}
+
+.carousel .item1{
+    background-image: url("http://demo.ovathemes.com/kababi/wp-content/uploads/2021/09/slide1_h2.jpg");
+}
+
+.carousel .item2{
+    background-image: url("http://demo.ovathemes.com/kababi/wp-content/uploads/2021/09/slide2_h2.jpg");
+}
+
+.carousel .item3{
+    background-image: url("https://images.pexels.com/photos/7741798/pexels-photo-7741798.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+}
+
+.carousel .next , .carousel .prev{
+    position: absolute;
+    background-color: transparent;
+    color: var(--white);
+    border: none;
+    font-size: 1.5em;
+}
+
+.carousel .next{
+    right: 0;
+    top: 50%;
+}
+
+.carousel .prev{
+    left: 0;
+    top: 50%;
+}
+
+.next .fas , .prev .fas{
+    font-size: 1.5em;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.452);
+}
+
+.next .fas:hover , .prev .fas:hover{
+    color: var(--primary);
+}
+
+.next .fas{
+    margin-right: 0.4em;
+}
+
+.prev .fas{
+    margin-left: 0.4em;
+}
+
+.carousel .item2{
+    transform: translateX(100%);
+}
+
+.carousel .item3{
+    transform: translateX(-100%);
+}
+
+.carousel h4{
+    font-size: 1.4em;
+    color: var(--primary);
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.carousel h2{
+    width: 80%;
+    font-size: 111px;
+    color: #ffffff;
+    line-height: 114px;
+    font-weight: lighter;
+    margin: 2rem 0em;
+}
+
+.carousel a{
+    border: 1px solid var(--primary);
+    color: var(--white);
+    background-color: transparent;
+}
+
+.carousel a:hover{
+    background-color: var(--primary);
+    color: var(--black);
+}
+
+@media only screen and (max-width:980px){
+    .carousel>div{
+        background-size: 75% 80%;
+    }
+    .carousel h2{
+        font-size: 80px;
+        line-height: 80px;
+    }
+
+    header{
+        height: 800px;
+    }
+}
+
+@media only screen and (max-width:800px){
+    .carousel>div{
+        background-size: 75% 60%;
+        padding-left: 3em;
+    }
+    .carousel h2{
+        font-size: 60px;
+        line-height: 60px;
+    }
+    header{
+        height: 750px;
+    }
+}
+
+@media only screen and (max-width:600px){
+    .carousel>div{
+        background-size: 75% 50%;
+    }
+    .carousel h2{
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    header{
+        height: 700px;
+    }
+}
+/* ************* */
+/* Carousel End */
+/* ************* */

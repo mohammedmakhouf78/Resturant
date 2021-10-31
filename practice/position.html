@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        .grandparent{
+            width: 800px;
+            height: 700px;
+            background-color: hotpink;
+            /* بتخلي العنصر نوعه فليكس */
+            display: flex;
+            /* تتحكم في مكان العنصر افقيا */
+            justify-content: center;
+            /* تتحكم في مكان العنصر راسيا */
+            align-items: center;
+
+            position: relative;
+        }
+        .parent{
+            background-color: gray;
+            height: 400px;
+            width: 400px;
+            position: relative;
+        }
+        .parent>div{
+            width: 100px;
+            height: 100px;
+        }
+        .red{
+            background-color: red;
+        }
+        .parent .blue{
+            background-color: blue;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: auto;
+            display: flex;
+            justify-content: space-between;
+            padding: 0px 2em;
+        }
+        .green{
+            background-color: green;
+        }
+        .black{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="grandparent">
+        <div class="parent">
+            <div class="blue">
+                <h2>hello world</h2>
+                <h2>hello world</h2>
+                <h2>hello world</h2>
+                <h2>hello world</h2>
+                <h2>hello world</h2>
+                <h2>hello world</h2>
+                <h2>hello world</h2>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
