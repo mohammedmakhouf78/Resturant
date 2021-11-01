@@ -2,6 +2,12 @@
     --white:white;
     --primary:#c8a96a;
     --black:#1d1d1d;
+    --light-brown: #310F07;
+    --mid-brown:#2C1B13;
+    --dark-yellow:#A29373;
+    --dark-orange:#653318;
+    --light-black:#0F0300;
+    --moov:#090C0F;
 }
 
 
@@ -23,6 +29,25 @@ body{
     overflow-x: hidden;
 }
 
+select {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.control{
+    position: relative;
+}
+
+.sc::after{
+    content: "▼";
+    font-size: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 28px;
+    position: absolute;
+    color: white;
+}
+
 .btn{
     text-decoration: none;
     color: #74320C;
@@ -33,6 +58,7 @@ body{
     border-radius: 10px;
     text-transform: uppercase;
     transition: all 0.3s ease;
+    border: none;
 }
 
 .btn .fas{
@@ -59,6 +85,10 @@ nav{
     color: var(--white);
     padding: 1.5em 3em;
     z-index: 999;
+}
+
+.nav-scroll{
+    background-color: var(--moov);
 }
 
 nav .logo img{
@@ -180,7 +210,7 @@ nav .burger .line:nth-child(2){
 /* Header Start */
 /* ************* */
 header{
-    height: 900px;
+    height: 100vh;
     background-image: url('https://image.shutterstock.com/z/stock-photo-chalk-board-with-fast-food-background-for-design-menu-for-your-cafe-restaurant-1289061067.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -347,4 +377,81 @@ header .bg{
 }
 /* ************* */
 /* Carousel End */
+/* ************* */
+
+
+
+
+/* ************* */
+/* Booking Start */
+/* ************* */
+.booking{
+    background-color: var(--moov);
+    padding: 3em;
+}
+
+.booking form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.booking .control{
+    width: 30%;
+    margin-top: 2em;
+}
+
+.booking .control select,.booking .control input,.booking .control .btn{
+    width: 100%;
+    padding: 1em;
+}
+
+.booking .control select,.booking .control input{
+    font-size: 21px;
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
+    border: 1px solid #222527;
+}
+
+.booking .control:last-child{
+    margin: 2em auto;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    border-radius: 4px;
+    margin-right: 2px;
+    opacity: 1;
+    filter: invert(0.8);
+  }
+  
+  input[type="date"]::-webkit-calendar-picker-indicator:hover {
+    opacity: 1
+  }
+
+.control .fas,.control .far{
+    color: white;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 28px;
+}
+
+@media only screen and (max-width:1000px){
+    .booking .control{
+        width: 45%;
+    }
+}
+
+@media only screen and (max-width:740px){
+    .booking form{
+        justify-content:center;
+    }
+    .booking .control{
+        width: 90%;
+    }
+}
+/* ************* */
+/* Booking End */
 /* ************* */

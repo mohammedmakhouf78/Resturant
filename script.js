@@ -61,3 +61,14 @@ prev.addEventListener("click", function () {
     index = 1;
   }
 });
+
+// Nav on scroll
+nav = document.querySelector("nav");
+window.onscroll = function () {
+  if (document.body.scrollTop > 75 || document.documentElement.scrollTop > 75) {
+    nav.classList.add("nav-scroll");
+  } else {
+    nav.classList.remove("nav-scroll");
+  }
+  // console.log(document.documentElement.scrollTop);
+};
