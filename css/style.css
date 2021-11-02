@@ -8,6 +8,8 @@
     --dark-orange:#653318;
     --light-black:#0F0300;
     --moov:#090C0F;
+    --bg:#0E1317;
+    --bg-text:#626262;
 }
 
 
@@ -32,6 +34,10 @@ body{
 select {
     -webkit-appearance: none;
     appearance: none;
+}
+
+img{
+    width: 100%;
 }
 
 .control{
@@ -454,4 +460,137 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 /* ************* */
 /* Booking End */
+/* ************* */
+
+
+
+
+
+/* ************* */
+/* Category Start */
+/* ************* */
+.category{
+    position: relative;
+}
+
+.category .bg{
+    color: var(--bg-text);
+    font-weight: 500;
+    position: absolute;
+    width: 100%;
+}
+
+.category .bg h6{
+    position: absolute;
+    font-size: 200px;
+    letter-spacing: 30px;
+    font-family: cursive;
+    text-transform: uppercase;
+    opacity: 0.2;
+    margin-left: -40px;
+    margin-top: 60px;
+    z-index: 5;
+}
+
+.category .content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--bg);
+    z-index: 4;
+}
+
+.category .content h3{
+    color: #C19977;
+    font-weight: 500;
+    font-size: 52px;
+    line-height: 60px;
+    text-transform: uppercase;
+    margin-top: 2.5em;
+    text-align: center;
+}
+
+.category .content h5{
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 24px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.category .categories{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 10em;
+}
+
+.category .categories .item{
+    width: 21%;
+    position: relative;
+    margin-bottom: 6em;
+    overflow: hidden;
+}
+
+.category .categories .item:nth-child(odd){
+    margin-top: -50px;
+}
+
+
+
+.category .categories .item p{
+    position: absolute;
+    left: 0;
+    bottom: 10%;
+    font-size: 2.5em;
+    background-color: var(--white);
+    padding: 0.1em 0.5em;
+    color: var(--bg);
+}
+
+.category .categories .item:nth-child(odd) p{
+    bottom: 22%;
+}
+
+.category .categories .item img{
+    transition: all 0.4s ease;
+}
+
+.category .categories .item:hover img{
+    transform: scale(1.2);
+}
+
+
+@media only screen and (max-width:930px){
+    .category .categories .item{
+        width: 45%;
+    }
+
+    .category{
+        height: 2800px;
+    }
+}
+
+@media only screen and (max-width:570px){
+    .category .categories .item{
+        width: 90%;
+    }
+
+    .category .categories .item:nth-child(odd){
+        margin-top: 0px;
+    }
+
+    .category .categories .item:nth-child(odd) p{
+        bottom: 10%;
+    }
+
+    .category{
+        height: 6100px;
+    }
+    
+}
+/* ************* */
+/* Category End */
 /* ************* */
