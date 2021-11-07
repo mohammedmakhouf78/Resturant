@@ -72,3 +72,10 @@ window.onscroll = function () {
   }
   // console.log(document.documentElement.scrollTop);
 };
+
+// let sec = document.querySelector(".sec");
+// let secContent = document.querySelector(".sec .content");
+
+// console.log(sec);
+// console.log(secContent.styles.height);
+// sec.innerHTML += secContent.innerHTML;
