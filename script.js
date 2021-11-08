@@ -70,12 +70,17 @@ window.onscroll = function () {
   } else {
     nav.classList.remove("nav-scroll");
   }
-  // console.log(document.documentElement.scrollTop);
 };
 
-// let sec = document.querySelector(".sec");
-// let secContent = document.querySelector(".sec .content");
+// modal
 
-// console.log(sec);
-// console.log(secContent.styles.height);
-// sec.innerHTML += secContent.innerHTML;
+let modal = document.querySelector(".video .modal");
+let modalBtn = document.querySelector(".video .button");
+let modalCloseBtn = document.querySelector(".video .close");
+modalBtn.addEventListener("click", function () {
+  modal.style.display = "initial";
+});
+
+modalCloseBtn.addEventListener("click", function () {
+  modal.style.display = "none";
+});

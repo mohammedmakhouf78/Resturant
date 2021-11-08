@@ -40,6 +40,14 @@ img{
     width: 100%;
 }
 
+.close{
+    font-size: 1.4em;
+    border: none;
+    background-color: transparent;
+    color: var(--white);
+    cursor: pointer;
+}
+
 p{
     color: #FFFFFF;
     font-size: 20px;
@@ -237,11 +245,7 @@ nav .burger .line:nth-child(2){
         position: absolute;
         top: 20px;
         right: 20px;
-        font-size: 1.4em;
-        border: none;
-        background-color: transparent;
-        color: var(--white);
-        cursor: pointer;
+        
     }
     nav .burger{
         display: initial;
@@ -538,6 +542,18 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 /* ************* */
 /* Category Start */
 /* ************* */
+.category::before{
+    content: "Category";
+    position: absolute;
+    font-size: 150px;
+    letter-spacing: 20px;
+    font-family: cursive;
+    text-transform: uppercase;
+    opacity: 0.2;
+    margin-left: -40px;
+    z-index: 5;
+    width: 1200px;
+}
 .category .categories{
     display: flex;
     justify-content: space-evenly;
@@ -622,6 +638,19 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     background-color: var(--moov);
 }
 
+.about::before{
+    content: "About";
+    position: absolute;
+    font-size: 150px;
+    letter-spacing: 20px;
+    font-family: cursive;
+    text-transform: uppercase;
+    opacity: 0.2;
+    margin-left: -40px;
+    z-index: 5;
+    width: 1200px;
+}
+
 .about .content{
     background-color: var(--moov);
     padding-bottom: 8em;
@@ -677,6 +706,18 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 /* ************* */
 /* Menu Start */
 /* ************* */
+.menu::before{
+    content: "Our Menu";
+    position: absolute;
+    font-size: 150px;
+    letter-spacing: 20px;
+    font-family: cursive;
+    text-transform: uppercase;
+    opacity: 0.2;
+    margin-left: -40px;
+    z-index: 5;
+    width: 1200px;
+}
 .content-menu{
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -830,6 +871,21 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         transform: scale(1.3);
     }
 }
+
+.modal{
+    display: none;
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.modal .close{
+    position: absolute;
+    top: -30px;
+    right: 0;
+}
+
 /* ************* */
 /* Video End */
 /* ************* */
