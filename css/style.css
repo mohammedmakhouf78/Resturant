@@ -734,6 +734,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     background-color: var(--moov);
     justify-content: space-evenly;
     align-items: center;
+    border: 2px dotted transparent;
+    border-radius: 10px;
+}
+
+.content-menu .item:hover{
+    border: 2px dotted var(--primary);
+    transition: all 0.5s ease;
 }
 
 .content-menu .item img{
@@ -880,6 +887,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     transform: translateX(-50%) translateY(-50%);
 }
 
+.modal iframe{
+    width: 50vw;
+    height: 50vh;
+}
+
 .modal .close{
     position: absolute;
     top: -30px;
@@ -888,4 +900,68 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 /* ************* */
 /* Video End */
+/* ************* */
+
+
+/* ************* */
+/* Clients Start */
+/* ************* */
+
+.clients h3{
+    margin-top: 0.6em;
+}
+
+.clients::before{
+    content: "Our Clients";
+    position: absolute;
+    font-size: 120px;
+    letter-spacing: 20px;
+    font-family: cursive;
+    text-transform: uppercase;
+    opacity: 0.2;
+    margin-left: -40px;
+    z-index: 5;
+    width: 1200px;
+}
+
+.chefs{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 4em 3em;
+}
+
+.chefs .item{
+    width: 15%;
+}
+.chefs .item h4{
+    margin: 1em 0em;
+}
+
+.chefs .item .social{
+    /* display: none; */
+    color: var(--bg-text);
+    margin-top: 0.5em;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.chefs .item .social .fab{
+    font-size: 25px;
+    transition: all 0.5s ease;
+}
+
+.chefs .item .social .fab:hover{
+    color: var(--primary);
+    cursor: pointer;
+}
+
+.chefs .item:hover .social{
+    display: flex;
+    opacity: 1;
+    justify-content: space-between;
+    width: 80%;
+    
+}
+/* ************* */
+/* Clients End */
 /* ************* */
