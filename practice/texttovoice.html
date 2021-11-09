@@ -32,7 +32,7 @@
 
 <body>
     <div>
-        <input type="text" id="text-to-speech" placeholder="Enter text to speak..." />
+        <input type="text" id="text-to-speech" placeholder="Enter text to speak..." value="" />
     </div>
     <div>
         <button type="button" onclick="textToAudio()">Speak</button>
@@ -49,7 +49,7 @@
             speech.text = msg;
             speech.volume = 1;
             speech.rate = 1;
-            speech.pitch = 1;
+            speech.pitch = 0;
 
             window.speechSynthesis.speak(speech);
         }

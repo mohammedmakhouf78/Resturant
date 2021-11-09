@@ -95,40 +95,23 @@ p{
 
 .sec {
     position: relative;
-    /* overflow: hidden; */
-    padding: 1em 0em;
+    padding: 5em 0em;
     background-color: var(--bg);
-    /* min-height: 1000px; */
 }
 
-/* .sec .bg{
-    color: var(--bg-text);
-    font-weight: 500;
+.sec::before{
     position: absolute;
-    width: 100%;
-} */
-
-/* .sec h6{
-    position: absolute;
-    font-size: 150px;
-    letter-spacing: 20px;
+    font-size: 10vw;
+    letter-spacing: 10px;
     font-family: cursive;
     text-transform: uppercase;
     opacity: 0.2;
-    margin-left: -40px;
-    margin-top: 60px;
     z-index: 5;
-    width: 1200px;
-} */
-
-/* .sec .content{
-    position: absolute;
-    top: 0;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 100%;
-    background-color: var(--bg);
-    z-index: 4;
-} */
+    text-align: center;
+}
 
 .sec h3{
     color: #C19977;
@@ -136,7 +119,7 @@ p{
     font-size: 52px;
     line-height: 60px;
     text-transform: uppercase;
-    margin-top: 2.5em;
+    margin-top: 0.6em;
     text-align: center;
 }
 
@@ -544,15 +527,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 /* ************* */
 .category::before{
     content: "Category";
-    position: absolute;
-    font-size: 150px;
-    letter-spacing: 20px;
-    font-family: cursive;
-    text-transform: uppercase;
-    opacity: 0.2;
-    margin-left: -40px;
-    z-index: 5;
-    width: 1200px;
 }
 .category .categories{
     display: flex;
@@ -640,15 +614,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .about::before{
     content: "About";
-    position: absolute;
-    font-size: 150px;
-    letter-spacing: 20px;
-    font-family: cursive;
-    text-transform: uppercase;
-    opacity: 0.2;
-    margin-left: -40px;
-    z-index: 5;
-    width: 1200px;
 }
 
 .about .content{
@@ -708,15 +673,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 /* ************* */
 .menu::before{
     content: "Our Menu";
-    position: absolute;
-    font-size: 150px;
-    letter-spacing: 20px;
-    font-family: cursive;
-    text-transform: uppercase;
-    opacity: 0.2;
-    margin-left: -40px;
-    z-index: 5;
-    width: 1200px;
 }
 .content-menu{
     flex-wrap: wrap;
@@ -810,18 +766,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 /* ************* */
 /* Video Start */
 /* ************* */
-/* .video::before{
-    content: "Video";
-    position: absolute;
-    font-size: 150px;
-    letter-spacing: 20px;
-    font-family: cursive;
-    text-transform: uppercase;
-    opacity: 0.2;
-    margin-left: -40px;
-    z-index: 5;
-    width: 1200px;
-} */
+
 .video{
     padding: 7em 0em;
 }
@@ -907,21 +852,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 /* Clients Start */
 /* ************* */
 
-.clients h3{
-    margin-top: 0.6em;
-}
-
 .clients::before{
     content: "Our Clients";
-    position: absolute;
-    font-size: 120px;
-    letter-spacing: 20px;
-    font-family: cursive;
-    text-transform: uppercase;
-    opacity: 0.2;
-    margin-left: -40px;
-    z-index: 5;
-    width: 1200px;
 }
 
 .chefs{
@@ -938,10 +870,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .chefs .item .social{
-    /* display: none; */
+    display: flex;
     color: var(--bg-text);
     margin-top: 0.5em;
     opacity: 0;
+    justify-content: space-between;
+    width: 80%;
     transition: all 0.5s ease;
 }
 
@@ -956,12 +890,69 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .chefs .item:hover .social{
-    display: flex;
     opacity: 1;
-    justify-content: space-between;
-    width: 80%;
-    
+}
+
+@media only screen and (max-width:960px){
+    .chefs{
+        flex-wrap: wrap;
+    }
+    .chefs .item{
+        width: 40%;
+        margin-bottom: 2em;
+    }
+}
+
+@media only screen and (max-width:660px){
+    .chefs .item{
+        width: 90%;
+    }
 }
 /* ************* */
 /* Clients End */
+/* ************* */
+
+
+
+/* ************* */
+/* Package Start */
+/* ************* */
+.package{
+    background-color: var(--moov);
+    padding: 7em 1em;
+}
+
+.icons{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.icons div img{
+    filter: brightness( 7% ) contrast( 0% ) saturate( 100% ) blur(0px) hue-rotate( 0deg );
+    transition: all 0.5s ease;
+}
+
+.icons div:hover img{
+    filter: brightness( 100% ) contrast( 100% ) saturate( 100% ) blur(0px) hue-rotate( 0deg );
+}
+/* ************* */
+/* Package End */
+/* ************* */
+
+
+
+
+
+/* ************* */
+/* Review Start */
+/* ************* */
+
+.reviews::before{
+    content: "Review";
+}
+
+
+
+/* ************* */
+/* Review End */
 /* ************* */
