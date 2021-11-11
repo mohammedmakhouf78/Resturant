@@ -48,6 +48,11 @@ img{
     cursor: pointer;
 }
 
+.logo img{
+    width: 150px;
+    height: 47px;
+}
+
 p{
     color: #FFFFFF;
     font-size: 20px;
@@ -155,11 +160,6 @@ nav{
 
 .nav-scroll{
     background-color: var(--moov);
-}
-
-nav .logo img{
-    width: 150px;
-    height: 47px;
 }
 
 nav ul{
@@ -951,8 +951,70 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     content: "Review";
 }
 
+.reviews .swiper-slide .col,.reviews .swiper-slide .col .signeture,.reviews .swiper-slide .col .left{
+    display: flex;
+}
+.reviews .swiper-slide{
+    margin-top: 7em;
+}
+.reviews .swiper-slide .col .hero{
+    border: 1px solid var(--bg-text);
+    padding: 2em;
+    margin: 0em 2em;
+    border-radius: 10px;
+}
+
+.reviews .swiper-slide .col .signeture{
+    margin-top: 2em;
+    justify-content: space-between;
+}
+
+.reviews .swiper-slide .col .signeture img{
+    border-radius: 50%;
+}
+
+.reviews .swiper-slide .col .signeture .name{
+    margin-left: 2em;
+}
+
+.reviews .swiper-slide .col .signeture .fas{
+    font-size: 4em;
+    color: var(--primary);
+}
+/* ************* */
+/* Review End */
+/* ************* */
+
 
 
 /* ************* */
-/* Review End */
+/* Footer Start */
+/* ************* */
+footer{
+    padding: 4em;
+    background-color: var(--moov);
+}
+
+.footer-navigation{
+    display: flex;
+    color: white;
+    justify-content: space-between;
+}
+
+.footer-navigation .col1{
+    width: 40%;
+}
+
+.footer-navigation p{
+    margin: 1em 0em;
+}
+
+.footer-navigation ul{
+    list-style: none;
+}
+.footer-navigation ul li{
+    margin-top: 1em;
+}
+/* ************* */
+/* Footer End */
 /* ************* */
